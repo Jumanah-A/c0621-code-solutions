@@ -1,7 +1,21 @@
 .contaier {
   display: flex;
+  background-color: #3894dc;
 }
 
 .row {
   display: flex;
 }
+
+/* .full-column {
+
+}
+
+.image {
+
+}
+
+.one-third-column
+{
+
+} */
