@@ -60,7 +60,6 @@ textarea {
 }
 
 button {
-  display: flex;
   background-color: #ec5c54;
   font-family: 'Brandon Grotesque', sans-serif;
   border-radius: 30px;
@@ -73,11 +72,8 @@ button {
 }
 
 .button {
-  display: flex;
-  justify-items: right;
-  justify-content: right;
-  align-content: flex-end;
-  position: absolute;
-  top: 325px;
-  left: 670px;
+  justify-content: flex-end;
+  position: relative;
+  top: 280px;
+  right: 50px;
 }
