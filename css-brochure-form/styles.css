@@ -74,6 +74,4 @@ button {
 .button {
   justify-content: flex-end;
   position: relative;
-  top: 280px;
-  right: 50px;
 }
