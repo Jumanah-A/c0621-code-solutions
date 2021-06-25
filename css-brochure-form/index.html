@@ -12,38 +12,41 @@
 <body>
   <h1>LEARN MORE</h1>
   <form>
-    <div>
-      <!--Company email text box-->
-      <label for="email">COMPANY EMAIL
-        <div>
-          <input type="text" name="email" placeholder="sally@company.co" />
-        </div>
-      </label>
+    <div class="container">
+      <div>
+        <!--Company email text box-->
+        <label for="email">COMPANY EMAIL
+          <div class="row">
+            <input type="text" name="email" placeholder="sally@company.co" />
+          </div>
+        </label>
 
-      <!--Name text box-->
-      <label for="name">NAME
-        <div>
-          <input type="text" name="name" placeholder="Sally Smith"/>
-        </div>
-      </label>
-      <!--Where are you hiring text box-->
-      <label for="location">WHERE ARE YOU HIRING?
-        <div>
-          <input type="text" name="location" placeholder="City, Country"/>
-        </div>
-      </label>
-      <!--How many engineers are you hiring in the next 6 months drop down list-->
-      <label for="engineers">HOW MANY ENGINEERS ARE YOU HIRING IN THE NEXT 6 MONTHS?
-        <div>
-          <select name="engineers" id="engineers">
-            <option value="1-2 Engineers" checked="checked">1-2 Engineers</option>
-          </select>
-        </div>
-      </label>
-
-      <label for="submit">
-        <button type="submit">SUBMIT</button>
-      </label>
+        <!--Name text box-->
+        <label for="name">NAME
+          <div class="row">
+            <input type="text" name="name" placeholder="Sally Smith"/>
+          </div>
+        </label>
+        <!--Where are you hiring text box-->
+        <label for="location">WHERE ARE YOU HIRING?
+          <div class="row">
+            <input type="text" name="location" placeholder="City, Country"/>
+          </div>
+        </label>
+        <!--How many engineers are you hiring in the next 6 months drop down list-->
+        <label for="engineers">HOW MANY ENGINEERS ARE YOU HIRING IN THE NEXT 6 MONTHS?
+          <div class="drop">
+            <select name="engineers" id="engineers">
+              <option value="1-2 Engineers" checked="checked">1-2 Engineers</option>
+            </select>
+          </div>
+        </label>
+      </div>
+      <div class="button">
+        <label for="submit">
+          <button type="submit">SUBMIT</button>
+        </label>
+      </div>
     </div>
   </form>
 
