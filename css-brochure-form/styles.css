@@ -7,20 +7,19 @@ h1 {
 }
 
 .container {
-  display: flex;
-  justify-items: center;
-  justify-content: center;
+  width: 500px;
+  margin: auto;
   font-family: 'Brandon Grotesque', sans-serif;
 }
 
 .row {
-  width: 110%;
   height: 20%;
   margin-bottom: 15px;
 }
 
 label {
-  margin-left: 10px;
+  margin: 10px 0 0 10px;
+  display: block;
   color: #312e2e;
 }
 
@@ -45,7 +44,7 @@ textarea {
   font-family: 'AtlasGrotesque', sans-serif;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40px;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 2px 8px;
@@ -55,7 +54,6 @@ textarea {
 #engineers {
   font-family: 'Brandon Grotesque', sans-serif;
   width: 100%;
-  height: 20%;
   font-size: 14px;
 }
 
@@ -72,6 +70,7 @@ button {
 }
 
 .button {
+  display: flex;
   justify-content: flex-end;
-  position: relative;
+  margin: 10px 0;
 }
