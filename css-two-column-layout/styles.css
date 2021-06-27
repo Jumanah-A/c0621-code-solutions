@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  margin: 1rem;
+}
+
+.full-column {
+  text-align: center;
+}
