@@ -1,7 +1,7 @@
 
 .row {
   display: flex;
-  justify-content: center;
+  margin: 1rem;
 }
 
 h1 {
@@ -41,16 +41,17 @@ body {
 
 .full-column {
   text-align: center;
-  margin-left: 15rem;
-  margin-right: 15rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
 .half-column {
   display: flex;
+  margin: 1rem;
 }
 
 .two-thirds-col {
-  margin-right: 9rem;
+  margin-right: 2rem;
   padding: 1rem;
 }
 
