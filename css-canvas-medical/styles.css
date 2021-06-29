@@ -1,7 +1,15 @@
 
 a {
   text-decoration: none;
-  color: grey;
+}
 
-  /* font-family: 'Avenir' sans-serif; */
+.footer {
+  display: flex;
+  background-color: #585454;
+  color: white;
+}
+
+footer {
+  color: grey;
+  font-family: 'Avenir', sans-serif;
 }
