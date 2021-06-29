@@ -3,13 +3,37 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: 'Tiempos Headline', sans-serif;
+  color: #304464;
+}
+
 .footer {
   display: flex;
   background-color: #585454;
   color: white;
 }
 
+.learn-more {
+  display: flex;
+  color: #585454;
+  font-family: 'Tiempos Headline', sans-serif;
+  font-weight: 300;
+}
+
+header {
+  display: flex;
+}
+
 footer {
   color: grey;
   font-family: 'Avenir', sans-serif;
+}
+
+button {
+  color: white;
+  background-color: #304464;
+  font-family: 'Avenir', sans-serif;
+  border-radius: 0.25rem;
+  padding: 1rem;
 }
