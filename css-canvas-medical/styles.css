@@ -22,6 +22,7 @@ h1 {
 .tabs {
   display: flex;
   justify-content: center;
+  color: #a0a0a0;
 }
 
 button {
@@ -34,6 +35,20 @@ button {
   padding: 1rem 1rem;
   border-radius: 1rem;
   border: none;
+}
+
+.clinicians {
+  background-color: #fafafa;
+  font-family: 'Avenir', sans-serif;
+  color: #656565;
+}
+
+h2 {
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+.row {
+  font-family: 'Avenir', sans-serif;
 }
 
 .image {
@@ -74,7 +89,7 @@ button {
 
 .learn-more {
   display: flex;
-  color: #585454;
+  color: #656565;
   font-family: 'Tiempos Headline', sans-serif;
   font-weight: 300;
 }
