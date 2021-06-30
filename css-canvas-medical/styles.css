@@ -7,6 +7,7 @@
 
 .header {
   display: flex;
+  flex-basis: auto;
 }
 
 a {
@@ -47,14 +48,21 @@ h2 {
   font-family: 'Tiempos Headline', sans-serif;
 }
 
+:visited {
+  color: white;
+}
+
 .row {
   font-family: 'Avenir', sans-serif;
+  text-align: center;
 }
 
 .image {
   width: 1600px;
   height: 900px;
   background-image: url('images/hero.jpg');
+  background-size: 75%;
+  background-repeat: no-repeat;
   position: relative;
   padding: 3rem;
   margin: 3rem;
