@@ -1,13 +1,13 @@
 /* body {
 } */
 
-/* .container {
-  display: flex;
-} */
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
 
 .header {
-  display: flex;
-  flex-basis: auto;
+  flex-basis: 100%;
 }
 
 a {
@@ -53,6 +53,10 @@ h2 {
 }
 
 .row {
+  display: flex;
+}
+
+.avenir-center {
   font-family: 'Avenir', sans-serif;
   text-align: center;
 }
@@ -105,4 +109,16 @@ h2 {
 footer {
   color: grey;
   font-family: 'Avenir', sans-serif;
+}
+
+.column-third {
+  flex-basis: 30%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
