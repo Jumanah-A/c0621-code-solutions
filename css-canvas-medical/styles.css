@@ -25,6 +25,10 @@
   margin: 3rem;
 }
 
+.two-rem-padding {
+  padding: 3rem;
+}
+
 .padding {
   padding: 4rem 1rem 1rem 6.5rem;
 }
@@ -66,7 +70,7 @@ button {
   display: flex;
   background-image: url('images/hero.jpg');
   width: 1600px;
-  height: 900px;
+  height: 740px;
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -113,6 +117,10 @@ button {
   display: flex;
 }
 
+.clinicians-background {
+  background-color: #fafafa;
+}
+
 .flex-start {
   justify-content: flex-start;
 }
@@ -122,6 +130,7 @@ button {
 }
 
 .footer {
+  max-width: 1300px;
   flex-basis: 100%;
   background-color: #585454;
   color: white;
