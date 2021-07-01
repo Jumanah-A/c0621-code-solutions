@@ -17,10 +17,6 @@
   flex-basis: 100%;
 }
 
-/* .column-two-thirds {
-  flex-basis: 66%;
-} */
-
 .justify-between {
   justify-content: space-between;
 }
@@ -86,6 +82,10 @@ button {
   margin-right: 47rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .heading {
   font-family: 'Tiempos Headline', sans-serif;
   color: #6e6e6e;
@@ -97,11 +97,34 @@ button {
   font-family: 'Avenir', sans-serif;
   color: #6e6e6e;
   flex-basis: 100%;
-  text-align: center;
+}
+
+.grey-tiempos {
+  font-family: 'Tiempos Headline', sans-serif;
+  color: #6e6e6e;
 }
 
 .half-col {
   margin: 3rem;
+  flex-basis: 100%;
+}
+
+.flex-display {
+  display: flex;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.footer {
+  flex-basis: 100%;
+  background-color: #585454;
+  color: white;
 }
 
 /*
