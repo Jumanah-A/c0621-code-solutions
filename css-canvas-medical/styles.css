@@ -8,9 +8,9 @@
   flex-basis: 30%;
 }
 
-.column-two-thirds {
-  flex-basis: 66%;
-}
+/* .column-two-thirds {
+  flex-basis: 50%;
+} */
 
 .row {
   display: flex;
@@ -21,10 +21,6 @@
 
 .align-center {
   align-items: center;
-}
-
-.column-full {
-  flex-basis: 100%;
 }
 
 .justify-between {
