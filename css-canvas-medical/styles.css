@@ -1,6 +1,6 @@
 
 .container {
-  max-width: 1300px;
+  /* max-width: 1300px; */
   margin: auto;
 }
 
@@ -22,15 +22,23 @@
 }
 
 .two-rem-margins {
-  margin: 3rem;
+  margin: 2rem;
 }
 
 .two-rem-padding {
   padding: 3rem;
 }
 
+.large-font {
+  font-size: 48px;
+}
+
 .padding {
   padding: 4rem 1rem 1rem 6.5rem;
+}
+
+.border {
+  border-bottom: solid 1px #e7e9ec;
 }
 
 button {
@@ -41,10 +49,12 @@ button {
   padding: 1rem 1rem;
   border-radius: 0.25rem;
   border: none;
+  width: 16rem;
+  height: 4rem;
 }
 
 .get-started {
-  padding: 1rem 4rem;
+  /* padding: 1rem 4rem; */
   font-size: 25px;
 }
 
@@ -86,8 +96,36 @@ button {
   margin-right: 47rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: none;
+}
+
+.white-font {
+  color: white;
+}
+
 .text-center {
   text-align: center;
+}
+
+.bottom-margin {
+  margin-bottom: 2rem;
+}
+
+.address {
+  line-height: 0.75rem;
+}
+
+.tiempos {
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+.avenir {
+  font-family: 'Avenir', sans-serif;
 }
 
 .heading {
@@ -100,6 +138,9 @@ button {
 .grey-avenir {
   font-family: 'Avenir', sans-serif;
   color: #6e6e6e;
+}
+
+.flex-100 {
   flex-basis: 100%;
 }
 
@@ -110,7 +151,7 @@ button {
 
 .half-col {
   margin: 3rem;
-  flex-basis: 100%;
+  flex-basis: 50%;
 }
 
 .flex-display {
@@ -129,11 +170,25 @@ button {
   justify-content: flex-end;
 }
 
+.line-height {
+  line-height: 2.5rem;
+}
+
 .footer {
-  max-width: 1300px;
   flex-basis: 100%;
   background-color: #585454;
   color: white;
+  padding: 5rem;
+}
+
+.footer-elements {
+  color: grey;
+  font-family: 'Avenir', sans-serif;
+  text-decoration: none;
+}
+
+.white-image {
+  width: 25%;
 }
 
 /*
