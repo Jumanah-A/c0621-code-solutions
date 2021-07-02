@@ -1,0 +1,23 @@
+.row {
+  display: flex;
+}
+
+.column-fifth {
+  flex-basis: 20%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.grey-font {
+  color: #d7d7d7;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.center {
+  text-align: center;
+}
