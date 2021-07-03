@@ -1,0 +1,4 @@
+/* exported firstChars */
+function firstChars() {
+
+}
