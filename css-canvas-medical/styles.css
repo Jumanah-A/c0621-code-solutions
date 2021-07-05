@@ -8,10 +8,6 @@
   flex-basis: 30%;
 }
 
-/* .column-two-thirds {
-  flex-basis: 50%;
-} */
-
 .row {
   display: flex;
   margin: auto;
@@ -40,7 +36,7 @@
 }
 
 .padding {
-  padding: 4rem 0 1rem 6.5rem;
+  padding: 2rem 0 0 5.5rem;
 }
 
 .border {
@@ -96,7 +92,7 @@ button {
   font-family: 'Avenir', sans-serif;
   position: absolute;
   color: white;
-  margin-right: 47rem;
+  right: 33.5rem;
 }
 
 a {
@@ -117,6 +113,7 @@ a:visited {
 
 .top-padding {
   padding-top: 3rem;
+  position: relative;
 }
 
 .bottom-margin {
