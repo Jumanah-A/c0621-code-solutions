@@ -1,13 +1,27 @@
 .row {
   display: flex;
+  align-items: flex-end;
 }
 
 .column-fifth {
   flex-basis: 20%;
+  width: 100%;
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
+}
+
+.margins {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 2.5rem;
+}
+
+.border-style {
+  border: solid #fdf2e7;
+  background-color: #fdf2e7;
+  border-radius: 0.5rem;
 }
 
 .grey-font {
@@ -19,5 +33,15 @@ body {
 }
 
 .center {
-  text-align: center;
+  justify-content: center;
+}
+
+.container {
+  width: 1600px;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
