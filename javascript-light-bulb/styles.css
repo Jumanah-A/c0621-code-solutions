@@ -1,0 +1,39 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  background-color: white;
+}
+
+.bulb {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: #faea84;
+  filter: drop-shadow(0 0 10px #faea84);
+  margin: auto;
+  border-style: none;
+}
+
+.bulb-on {
+  background-color: #faea84;
+  filter: drop-shadow(0 0 10px #faea84);
+}
+
+.bulb-off {
+  background-color: #252525;
+  filter: drop-shadow(0 0 10px #252525);
+}
+
+.background-off {
+  background-color: black;
+}
+
+.background-on {
+  background-color: white;
+}
