@@ -1,4 +1,8 @@
 /* exported invert */
+/*
+
+*/
+
 function invert(source) {
   var sourceValue;
   var newObject = {};
