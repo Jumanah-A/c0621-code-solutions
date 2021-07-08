@@ -1,5 +1,4 @@
-var $elements = document.querySelector('form');
-var $button = $elements[3];
+var $elements = document.getElementById('contact-form').elements;
 var userName = $elements.name;
 var userEmail = $elements.email;
 var userMessage = $elements.message;
@@ -13,5 +12,5 @@ function handleInput(event) {
   event.preventDefault();
   resetForm(event);
 }
-$button.addEventListener('click', handleInput);
+document.getElementById('contact-form').addEventListener('submit', handleInput);
 function resetForm(event) { document.getElementById('contact-form').reset(); }
