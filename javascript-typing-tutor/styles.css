@@ -1,0 +1,35 @@
+
+* {
+  box-sizing: border-box;
+}
+
+span {
+  font-family: 'Courier Prime', monospace;
+}
+
+.text {
+  min-height: 100vh;
+  display: flex;
+}
+
+.incorrect {
+  color: red;
+}
+
+.sentence {
+  margin: auto;
+}
+
+.correct {
+  color: #60ce34;
+}
+
+.current {
+  border-bottom: solid 3px;
+}
+
+.letter {
+  margin: 0.1rem;
+
+  /* padding: 1rem; */
+}
