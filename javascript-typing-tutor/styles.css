@@ -1,0 +1,89 @@
+
+* {
+  box-sizing: border-box;
+}
+
+span {
+  font-family: 'Courier Prime', monospace;
+}
+
+.text {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.incorrect {
+  color: red;
+  border-bottom: red solid 3px;
+}
+
+.sentence {
+  margin: auto;
+}
+
+.correct {
+  color: #60ce34;
+}
+
+.current {
+  border-bottom: solid 3px;
+}
+
+.letter {
+  margin: 0.1rem;
+}
+
+.reset {
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.dialogue {
+  background-color: white;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 0.25rem;
+}
+
+button {
+  color: white;
+  border-style: none;
+  border-radius: 0.15rem;
+  padding: 0.5rem 1.75rem;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 75%);
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  font-size: larger;
+}
+
+.button {
+  position: relative;
+}
+
+.modal {
+  position: fixed;
+  font-family: sans-serif;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.overlay-shadow {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.no-button {
+  background-color: #eb5d5d;
+}
+
+.yes-button {
+  background-color: greenyellow;
+}
