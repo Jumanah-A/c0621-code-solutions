@@ -6,11 +6,11 @@ var $hidden = document.querySelector('.hidden');
 var lettersTyped = 0;
 function handleKeyDown(event) {
   lettersTyped++;
-  if ($span[index].textContent === event.key && index < 29) {
+  if ($span[index].textContent === event.key && index < $span.length - 1) {
     $span[index].className = 'letter correct';
     index++;
     $span[index].className = 'letter current';
-  } else if ($span[index].textContent === event.key && index === 29) {
+  } else if ($span[index].textContent === event.key && index === $span.length - 1) {
     $span[index].className = 'letter correct';
     $hidden.className = 'modal overlay-shadow';
     index = 0;
