@@ -1,20 +1,15 @@
 
-// var $openModal = document.querySelector(".open-modal");
-// var $modal = document.querySelector(".modal");
-// var $noButton = document.querySelector(".no-button");
-// function handleOpenModal(event)
-// {
-//   $modal.showModal();
-// }
-// //add openmodal listener
-// remove the hidden elemnet from m the bdialogue page
+var $openModal = document.querySelector('.open-modal');
+var $hidden = document.querySelector('.hidden');
+var $noButton = document.querySelector('.no-button');
+function handleOpenModal(event) {
+  $hidden.className = 'modal overlay-shadow';
+}
 
-// $openModal.addEventListener('click',handleOpenModal);
+$openModal.addEventListener('click', handleOpenModal);
 
-// function handleNoButton(event)
-// {
-//   console.log("close button ");
-//   $modal.close();
-// }
-// //add nobutton listener
-// $noButton.addEventListener('click', handleNoButton);
+function handleNoButton(event) {
+  $hidden.className = 'hidden';
+}
+
+$noButton.addEventListener('click', handleNoButton);

@@ -3,8 +3,12 @@ button {
   color: white;
   border-style: none;
   border-radius: 0.15rem;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1.75rem;
   box-shadow: 0 2px 3px 0 rgb(0 0 0 / 75%);
+}
+
+h2 {
+  margin: 1rem;
 }
 
 .button {
@@ -13,12 +17,15 @@ button {
 
 .open-modal {
   background-color: #4a4ae9;
+  font-size: larger;
 }
 
 .no-button {
   background-color: #eb5d5d;
   display: flex;
   margin: auto;
+  margin-top: 2rem;
+  font-size: larger;
 }
 
 .modal {
@@ -39,16 +46,10 @@ button {
 .dialogue {
   background-color: white;
   margin: auto;
-  padding: 1rem;
-  border-radius: 0.1rem;
-
-  /* display: flex;
-  align-items: center; */
-
-  /* justify-content: center;
-  position: relative; */
+  padding: 2rem;
+  border-radius: 0.25rem;
 }
 
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
