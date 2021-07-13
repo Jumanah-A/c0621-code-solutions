@@ -31,11 +31,6 @@ function isAnagram(firstString, secondString) {
     return true;
   } else {
     var index = 0;
-    while (firstArray[index] === ' ') {
-      if (firstArray[index] === ' ') {
-        firstArray.shift();
-      }
-    }
     while (secondArray[index] === ' ') {
       if (secondArray[index] === ' ') {
         secondArray.shift();
