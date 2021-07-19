@@ -32,9 +32,7 @@ function isAnagram(firstString, secondString) {
   } else {
     var index = 0;
     while (secondArray[index] === ' ') {
-      if (secondArray[index] === ' ') {
-        secondArray.shift();
-      }
+      secondArray.shift();
     }
   }
   if (firstArray.toString() === secondArray.toString()) {
