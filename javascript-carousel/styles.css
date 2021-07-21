@@ -1,0 +1,41 @@
+
+i {
+  padding: 0.5rem;
+}
+
+img {
+  padding: 2rem;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.right-left-padding {
+  padding: 0 6rem;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.border {
+  border: black solid 2px;
+  margin: 2rem;
+}
+
+.two-rem {
+  padding: 2rem;
+}
