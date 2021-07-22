@@ -2,29 +2,29 @@ var imageArray = ['images/001.png', 'images/004.png', 'images/007.png', 'images/
 var $img = document.querySelector('img');
 var index = 0;
 function handleClick(event) {
-  var $imgUrl = $img.getAttribute('src');
   if (event.target.className === 'fas fa-chevron-right fa-4x') {
     clearInterval(intervalId);
     intervalId = setInterval(myCallback, 3000);
-    changeImage($imgUrl, 'right');
+    changeImage('right');
 
   } else if (event.target.className === 'fas fa-chevron-left fa-4x') {
     clearInterval(intervalId);
     intervalId = setInterval(myCallback, 3000);
-    changeImage($imgUrl, 'left');
+    changeImage('left');
 
   } else if (event.target.className === 'far fa-circle') {
     clearInterval(intervalId);
     intervalId = setInterval(myCallback, 3000);
     document.querySelector('.current').className = 'far fa-circle';
     document.getElementById(event.target.id).className = 'current fas fa-circle';
+    index = event.target.id;
     $img.setAttribute('src', imageArray[event.target.id]);
   }
 }
 
-function changeImage(imgUrl, direction) {
+function changeImage(direction) {
   if (direction === 'right') {
-    if (index === imageArray.length - 1) {
+    if (index >= imageArray.length - 1) {
       index = 0;
     } else {
       index++;
@@ -47,7 +47,6 @@ $carousel.addEventListener('click', handleClick);
 $progressBar.addEventListener('click', handleClick);
 
 function myCallback() {
-  var $imgUrl = $img.getAttribute('src');
-  changeImage($imgUrl, 'right');
+  changeImage('right');
 }
 var intervalId = setInterval(myCallback, 3000);
