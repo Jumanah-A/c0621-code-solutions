@@ -55,9 +55,10 @@ function determineWinner(max, players, noOfCards) {
     }
   }
   if (winnersArray.length !== 0) {
+    console.log('claling run game againg');
+    // debugger;
     runGame(winnersArray, noOfCards);
-  }
-  return max;
+  } else { return max; }
 }
 
 function runGame(players, noOfCards) {
