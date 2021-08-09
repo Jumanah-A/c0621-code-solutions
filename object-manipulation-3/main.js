@@ -46,6 +46,8 @@ function determineWinner(max, players, noOfCards) {
     if (players[key].score > max.score) {
       max.name = players[key].name;
       max.score = players[key].score;
+      winnersArray = [];
+      winnersArray.push(max.name);
     } else if (players[key].score === max.score) {
       winnersArray.push(max.name);
       winnersArray.push(players[key].name);
@@ -54,8 +56,9 @@ function determineWinner(max, players, noOfCards) {
       max.score = players[key].score;
     }
   }
-  if (winnersArray.length !== 0) {
-    console.log('claling run game againg');
+  // if(players[winnersArray[0]].score =)
+  if (winnersArray.length > 1) {
+    console.log('playing run game again!!');
     // debugger;
     runGame(winnersArray, noOfCards);
   } else { return max; }
@@ -72,3 +75,18 @@ function runGame(players, noOfCards) {
 var players = ['Jumanah', 'Jack', 'Jane', 'John', 'Jill', 'Patrick', 'Bob'];
 var noOfCards = 3;
 runGame(players, noOfCards);
+// var playersTest = [{ name: "Jumanah",
+//    hand:
+//    [{ suit: "Club", rank: "K" },
+//    { suit: "Diamond", rank: "4" },
+//    { suit: "Spade", rank: "K" }], score: 24 },
+//   { name: "Jack",
+//     hand:
+//     [{ suit: "Diamond", rank: "5" },
+//     { suit: "Club", rank: "4" },
+//     { suit: "Spade", rank: "6" }], score: 15 },
+//   { name: "Jane",
+//     hand:
+//   { suit: "Diamond", rank: "2" },
+//   { suit: "Heart", rank: "8" }
+//   { suit: "Heart", rank: "4" }, score: 14 }];
