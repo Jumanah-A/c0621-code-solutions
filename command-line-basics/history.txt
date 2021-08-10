@@ -1,0 +1,309 @@
+    1  exit
+    2  whoami
+    3  git config --global user.name "Jumanah Almajnouni"
+    4  git config --global user.email "jumanahh@outlook.com"
+    5  gt config --list
+    6  git config --list
+    7  exit
+    8  list
+    9  pwd
+   10  cd http-messages
+   11  cd repos
+   12  ls
+   13  pwd
+   14  cd 
+   15  cd
+   16  pwd
+   17  cd repos/
+   18  cd http-messages/
+   19  https httpie.io/hello
+   20  http --help
+   21  GET https://example.com
+   22  http GET https://example.com
+   23  http get https://example.com
+   24  http get https://example.com --verbose
+   25  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   26  http --body GET https://example.com > index.html
+   27  git status
+   28  exit
+   29  cd repos/
+   30  git status
+   31  ls
+   32  cd ajax-project/
+   33  git status
+   34  cd repos/
+   35  cd ajax-project/
+   36  git status
+   37  git log
+   38  git reset --soft head^
+   39  git merge --abort
+   40  git status
+   41  git reset --soft head^
+   42  git status
+   43  git stash
+   44  git pull origin master
+   45  git checkout -b project-cleanup
+   46  git status
+   47  git stash apply
+   48  git add .
+   49  git status
+   50  git commit -m "files and directories cleanup"
+   51  git status
+   52  git commit -m "CSS"
+   53  git add .
+   54  git commit -m "CSS"
+   55  git push origin project-cleanup
+   56  git status
+   57  git add .
+   58  git commit -m "Javascript"
+   59  git push origin project-cleanup
+   60  git status
+   61  git checkout master
+   62  git status
+   63  git branch --list
+   64  git status
+   65  cd
+   66  cd repos/
+   67  ls
+   68  cd c0621-code-solutions/
+   69  ls
+   70  git status
+   71  git statu
+   72  git status
+   73  git push origin master
+   74  git push origin object-manipulation-3
+   75  git checkout master
+   76  cd 
+   77  cd repos/
+   78  cd c0621-code-solutions/\
+   79  git status
+   80  pwd
+   81  git switch master
+   82  git pull origin master
+   83  git branch es6-const-let
+   84  git branch --list
+   85  git switch es6-const-let
+   86  git status
+   87  git add .
+   88  git commit -m "Completed exercise by changing var keyword to let or const"
+   89  git push origin es6-const-let
+   90  git status
+   91  git add .
+   92  git commit -m "Changed the const varible naming style (letters all uppercase)"
+   93  git push origin es6-const-let
+   94  git status
+   95  git checkout master
+   96  git status
+   97  pwd
+   98  git branch es6-template-literals
+   99  git switch es6-template-literals
+  100  git branch --lis
+  101  git status
+  102  git add .
+  103  git commit -m "Changed all string concatonation to string templates"
+  104  git push origin es6-template-literals
+  105  git statsus
+  106  git status
+  107  git statsu
+  108  git status
+  109  git checkout master
+  110  git pull origin master
+  111  git status
+  112  ls
+  113  git switch object-manipulation-3
+  114  git status
+  115  git add .
+  116  git commit -m "Added and commented out test paramaetrs for the tie"
+  117  git status
+  118  git push object-manipulation-3
+  119  git push origin  object-manipulation-3
+  120  git status
+  121  git checkout master
+  122  git pull origin master
+  123  git status
+  124  git branch es6-destructuring
+  125  git switch es6-destructuring
+  126  git status
+  127  git add.
+  128  git add .
+  129  git commit -m "Completed detructuring exercise"
+  130  git status
+  131  git push origin es6-detructuring
+  132  git push origin es6-destructuring
+  133  git status
+  134  git checkout master
+  135  git status
+  136  git switch object-manipulation
+  137  git switch object-manipulation-3
+  138  git status]
+  139  git status
+  140  git add .
+  141  git commit -m "Test one more time on the game tie"
+  142  git add .
+  143  git commit -m "Test one more time on the game tie"
+  144  git push origin  object-manipulation-3
+  145  git push origin object-manipulation-3
+  146  git checkout master
+  147  git branch es6-arrow-functions
+  148  git switch es6-arrow-functions
+  149  git status
+  150  git add .
+  151  git commit -m "Completed arrow functions exercise"
+  152  git push origin es6-arrow-functions
+  153  git checkout master
+  154  git pull origin master
+  155  git switch es6-arrow-functions
+  156  git add .
+  157  git status
+  158  git commit -m "Completed arrow functions exercise"
+  159  git push origin es6-arrow-functions
+  160  git pull origin es6-arrow-functions
+  161  git remote add origin git@github.com:Jumanah-A/c0621-code-solutions.git
+  162  git remote -v
+  163  git log
+  164  cd
+  165  exit
+  166  cd repos/
+  167  ls
+  168  cd c0621-code-solutions/
+  169  git status
+  170  git push origin es6-arrow-functions
+  171  checkout master
+  172  git chekcout master
+  173  git checkout master
+  174  git statsu
+  175  git status
+  176  git pull origin master
+  177  git statuas
+  178  git status
+  179  git pull origin master
+  180  git switch object-manipulation-3
+  181  git status
+  182  git push origin object-manipulation-3
+  183  git switch es6-arrow-functions
+  184  git status
+  185  git checkout mastet
+  186  git checkout master
+  187  git pull origin master
+  188  git branch command-line-basics
+  189  git status
+  190  git switch command-line-basics
+  191  clear
+  192  pwd
+  193  cd .;
+  194  cd ..;
+  195  cd c0621-code-solutions/
+  196  git checkout 
+  197  git checkout master
+  198  cd command-line-basics/
+  199  git switch command-line-basics 
+  200  man man
+  201  man cat
+  202  cat man
+  203  man catr
+  204  man cat
+  205  cat laziness.txt 
+  206  cat impatience.txt 
+  207  cat hubris.txt 
+  208  cat laziness.txt impatience.txt hubris.txt 
+  209  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  210  cat three-virtues.txt 
+  211  cat laziness.txt 
+  212  cat three-virtues.txt 
+  213  ls
+  214  cat lol.txt
+  215  cat and-then.txt
+  216  man ls
+  217  ls
+  218  ls -a
+  219  ls -F
+  220  ls lfz-staff/
+  221  ls lfz-staff/ -A
+  222  ls lfz-staff/ -a
+  223  ls lfz-staff/ -F
+  224  ls -aF lfz-staff > lfz-staff/contents.txt
+  225  cat lfz-staff/content.,txt
+  226  cat lfz-staff/content.txt
+  227  ls
+  228  cd lfz-staff/
+  229  ls
+  230  cd ..;
+  231  cat lfz-staff/contents.txt
+  232  man ppwd
+  233  man pwd
+  234  pwd
+  235  pwd -> i-was-here.txt
+  236  ls
+  237  cat i-was-here.txt 
+  238  man echo
+  239  echo 'Hello, World!'
+  240  echo 'Hello, World!' > hello.txt
+  241  ls
+  242  cat hello.txt 
+  243  man touch 
+  244  touch tag-youre-it.txt
+  245  touch boop.txt
+  246  lsa
+  247  ls
+  248  rm -r boop.txt
+  249  ls
+  250  touch snoot/boop.txt
+  251  ls
+  252  cd snoot/
+  253  ls
+  254  cta boop.txt 
+  255  cat boop.txt 
+  256  cd ..;
+  257  man mk-dir
+  258  man mkdir
+  259  mkdir parent
+  260  ls
+  261  mkdir -p parent/child/grandchild
+  262  ls
+  263  cd parent/
+  264  ls
+  265  cd child/
+  266  ls
+  267  cd....;
+  268  cd..;p
+  269  cd..;
+  270  cd..
+  271  xcd..;
+  272  cd..;
+  273  cd
+  274  cd repos/
+  275  cd c0621-code-solutions/
+  276  cd command-line-basics/
+  277  ls
+  278  touch parent/child/grandchild/.gitkeep
+  279  cd parent/
+  280  cd child/
+  281  cd ch
+  282  cd grandchild/
+  283  ls
+  284  ls -a
+  285  cd..;
+  286  cd -
+  287  cd --
+  288  cd repos/
+  289  cd c0621-code-solutions/\
+  290  cd command-line-basics/
+  291  ls
+  292  man mv
+  293  ls
+  294  mv pokiemans pokemon
+  295  ls
+  296  man rm
+  297  rm lol.txt
+  298  ls
+  299  rm -r kill-me/
+  300  ls
+  301  man cp
+  302  cp and-then.txt no-and-then.txt
+  303  ls
+  304  cat and-then.txt 
+  305  cat no-and-then.txt 
+  306  ls
+  307  man history
+  308  history
+  309  history > history.txt
