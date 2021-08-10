@@ -51,30 +51,32 @@ function determineWinner(max, players, noOfCards) {
     } else if (players[key].score === max.score) {
       winnersArray.push(max.name);
       winnersArray.push(players[key].name);
-      console.log('there is a tie between ' + max.name + ' and ' + players[key].name + ' with a value of ' + max.score);
       max.name = players[key].name;
       max.score = players[key].score;
     }
   }
-  // if(players[winnersArray[0]].score =)
-  if (winnersArray.length > 1) {
-    console.log('playing run game again!!');
+  var winnerSet = new Set(winnersArray);
+  if (winnerSet.size > 1) {
     // debugger;
-    runGame(winnersArray, noOfCards);
+    console.log('there is a tie between ' + max.name + ' and ' + players[key].name + ' with a value of ' + max.score);
+    console.log('if sinnerset has the max item', winnerSet.has(max.name));
+    console.log('playing run game again!!');
+    runGame(winnerSet, noOfCards);
   } else { return max; }
 }
 
-function runGame(players, noOfCards) {
+function runGame(players, noOfCards, shuffledDeck) {
   var playersHand = createHand(players);
   playersHand = distributeCards(playersHand, noOfCards);
   var max = { name: '', score: 0 };
-  max = determineWinner(max, playersHand, noOfCards);
+  max = determineWinner(max, playersHand, noOfCards, shuffledDeck);
   console.log('Winner is ' + max.name + ' with a score of ' + max.score + '!');
 }
 
-var players = ['Jumanah', 'Jack', 'Jane', 'John', 'Jill', 'Patrick', 'Bob'];
-var noOfCards = 3;
-runGame(players, noOfCards);
+// var players = ['Jumanah', 'Jack', 'Jane', 'John', 'Jill', 'Patrick', 'Bob'];
+var players = ['John', 'Jill', 'Patrick', 'Bob'];
+var noOfCards = 2;
+runGame(players, noOfCards, shuffledDeck);
 // var playersTest = [{ name: "Jumanah",
 //    hand:
 //    [{ suit: "Club", rank: "K" },
