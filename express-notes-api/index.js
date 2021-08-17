@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const data = require('./data.json');
 const fs = require('fs');
+console.log(data);
 
 app.get('/api/notes',(req,res) =>
 {
@@ -77,31 +78,33 @@ app.delete('/api/notes/:id', (req,res) => {
     });
   }
 });
-app.put('/api/notes:id',(req,res) => {
-  // res.send("oh no!")
-  // console.log("in the put method");
-  // console.log(req.body);
-  // const itemId = req.params.id;
-  // if(itemId < 0)
-  // {
-  //   res.status(400).send({ "error": "You have entered a negative ID number, please enter an appropriate ID number." });
-  // } else if (data.notes[itemId].content === "")
-  // {
-  //   es.status(404).send({ "error": `Cannot find a note for id ${itemId}` });
-  // } else if (!Object.keys(req.body).includes('content'))
-  // {
-  //   res.status(400).send({ "error": "content field is required" });
-  // }else
-  // {
-  //   data.notes[itemId] = req.body[content];
-  //   fs.writeFile('data.json', JSON.stringify(data), err => {
-  //     if (err) {
-  //       res.status(500).send({ "error": "An unexpected error occurred." });
-  //     } else {
-  //       res.sendStatus(200);
-  //     }
-  //   });
-  // };
+
+app.put('/api/notes/:id',(req,res) => {
+  const itemId = req.params.id;
+  let idArray = Object.keys(data.notes);
+  if(itemId < 0)
+  {
+    res.status(400).send({ "error": "You have entered a negative ID number, please enter an appropriate ID number." });
+  }else if (Object.keys(req.body).length === 0)
+  {
+    res.status(400).send({ "error": "content field is required" });
+  } else if (!(idArray.includes(itemId))) {
+    res.status(404).send({ "error": `Cannot find a note for id ${itemId}` });
+  }else
+  {
+    const current = {};
+    current["content"] = req.body.content;
+    current["id"] = itemId;
+
+    data.notes[itemId] = current;
+    fs.writeFile('data.json', JSON.stringify(data), err => {
+      if (err) {
+        res.status(500).send({ "error": "An unexpected error occurred." });
+      } else {
+        res.status(200).send(current);
+      }
+    });
+  };
 })
 
 
