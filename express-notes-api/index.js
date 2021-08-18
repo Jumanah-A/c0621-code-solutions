@@ -29,7 +29,7 @@ app.use(jsonInstance);
 
 app.post('/api/notes', (req, res) => {
   const entryBody = req.body;
-  if (!Object.keys(entryBody).includes('content')) {
+  if (entryBody.content === undefined) {
     res.status(400).send({ error: 'content field is required' });
   } else {
     let newBody = {};
