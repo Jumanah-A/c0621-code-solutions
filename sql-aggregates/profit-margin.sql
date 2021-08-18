@@ -1,0 +1,11 @@
+------ THIS IS A PERFECT REVENUE FUNCTION THAT WORKS
+--revenue function
+
+-- select "f"."title", "f"."description","f"."rating",
+-- sum("payments"."amount")
+-- from "films" as "f"
+-- join "inventory" using ("filmId")
+-- join "rentals" using ("inventoryId")
+-- join "payments" using ("rentalId")
+-- group by "filmId"
+-- order by "sum" desc;
