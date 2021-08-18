@@ -17,10 +17,8 @@ app.get('/api/notes/:id', (req, res) => {
   const itemId = req.params.id;
   if (itemId < 0) {
     res.status(400).send({ error: 'You have entered a negative ID number, please enter an appropriate ID number.' });
-  } else if (Object.keys(data.notes).includes(itemId)) {
-    if ((Object.keys(data.notes[itemId]).includes('content')) && !(data.notes[itemId].content === '')) {
-      res.status(200).send(data.notes[itemId]);
-    }
+  } else if (data.notes[itemId] !== undefined) {
+    res.status(200).send(data.notes[itemId]);
   } else {
     res.status(404).send({ error: `Cannot find a note for id ${itemId}` });
   }
