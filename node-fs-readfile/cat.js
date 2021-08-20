@@ -1,33 +1,40 @@
 
 const fileArray = process.argv.slice(2);
 const fs = require('fs');
-
-// let result = "hello this is the FINAL";
-for (var i = 0; i < fileArray.length; i++) {
-
-  try {
-    const arr = [];
-    const result = 'hello this is the FINAL';
-
+const objArr = [];
+function readFile() {
+  let object = {};
+  for (var i = 0; i < fileArray.length; i++) {
+    const currentFile = fileArray[i];
+    object.name = currentFile;
     fs.readFile(fileArray[i], 'utf-8',
       (err, data) => {
         if (err) { console.log(err); } else {
-          console.log(arr.length);
-          arr.push(data);
-          console.log(arr);
-        // result+=JSON.parse(data);
-        // console.log(result)
-        // console.log(data);
+          object[currentFile] = data;
+          printInOrder(object);
         }
       });
-    console.log(result);
-
-  } catch (error) {
-    console.error('there was an error:', error.message);
+    object = {};
   }
-  // console.log(result);
-
+}
+function printInOrder(obj) {
+  let finalString = '';
+  objArr.push(obj);
+  if (objArr.length === fileArray.length) {
+    for (var i = 0; i < fileArray.length; i++) {
+      finalString += getData(fileArray[i]);
+    }
+    console.log(finalString);
+  }
 }
 
-// console.log('x is ',x);
-// console.log(result);
+function getData(targetKey) {
+  for (var j = 0; j < objArr.length; j++) {
+    for (const [key, value] of Object.entries(objArr[j])) {
+      if (targetKey === key) {
+        return value;
+      }
+    }
+  }
+}
+readFile();
