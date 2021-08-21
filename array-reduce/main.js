@@ -23,19 +23,14 @@ console.log(sum);
 const product = numbers.reduce((a, b) => a * b);
 console.log(product);
 
-const balance = account.reduce((a, b, c, account) => {
-  if (account.length - 1 === c) {
-    if (b.type === 'withdrawal') {
-      return a.amount - b.amount;
-    } else { return a.amount + b.amount; }
-  } else if (b.type === 'withdrawal') {
-    b.amount = a.amount - b.amount;
-    return b;
+const balance = account.reduce((a, b) => {
+  if (b.type === 'withdrawal') {
+    return a - b.amount;
   } else {
-    b.amount += a.amount;
-    return b;
+    return a + b.amount;
   }
-});
+}
+, 0);
 console.log(balance);
-const composite = traits.reduce((a, b) => { return Object.assign(a, b); });
+const composite = traits.reduce((a, b) => { return Object.assign(a, b); }, {});
 console.log(composite);
