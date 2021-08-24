@@ -4,7 +4,6 @@
 // const querystring = require('querystring');
 // const cookieParser =  require('cookie-parser');
 
-
 // const client_id = 'ed1e27a30e304a93a7643beeb9c29696';
 // const client_secret ='a8ab73c18bce44a88f4f9bc4c352ca76';
 // const redirect_uri = '/Users/jumanahalmajnouni/repos/c0621-code-solutions/testing-spotify/index.html';
@@ -135,5 +134,5 @@
 //   });
 // });
 
-// console.log('Listening on 8888');
+// console.log('Listening on 3000');
 // app.listen(3000);
