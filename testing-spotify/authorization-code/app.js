@@ -1,52 +1,52 @@
-// const express = require('express');
-// const request = require('request');
-// const cors = require('cors');
-// const querystring = require('querystring');
-// const cookieParser =  require('cookie-parser');
+const express = require('express');
+const request = require('request');
+const cors = require('cors');
+const querystring = require('querystring');
+const cookieParser =  require('cookie-parser');
 
-// const client_id = 'ed1e27a30e304a93a7643beeb9c29696';
-// const client_secret ='a8ab73c18bce44a88f4f9bc4c352ca76';
-// const redirect_uri = '/Users/jumanahalmajnouni/repos/c0621-code-solutions/testing-spotify/index.html';
+const client_id = 'ed1e27a30e304a93a7643beeb9c29696';
+const client_secret ='a8ab73c18bce44a88f4f9bc4c352ca76';
+const redirect_uri = 'http://localhost:3001';
 
-// /**
-//  * Generates a random string containing numbers and letters
-//  * @param  {number} length The length of the string
-//  * @return {string} The generated string
-//  */
-// var generateRandomString = function (length) {
-//   var text = '';
-//   var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+/**
+ * Generates a random string containing numbers and letters
+ * @param  {number} length The length of the string
+ * @return {string} The generated string
+ */
+var generateRandomString = function (length) {
+  var text = '';
+  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-//   for (var i = 0; i < length; i++) {
-//     text += possible.charAt(Math.floor(Math.random() * possible.length));
-//   }
-//   return text;
-// };
+  for (var i = 0; i < length; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return text;
+};
 
-// var stateKey = 'spotify_auth_state';
+var stateKey = 'spotify_auth_state';
 
-// var app = express();
+var app = express();
 
-// app.use(express.static(__dirname + '/public'))
-//   .use(cors())
-//   .use(cookieParser());
+app.use(express.static(__dirname + '/public'))
+  .use(cors())
+  .use(cookieParser());
 
-// app.get('/login', function (req, res) {
+app.get('/login', function (req, res) {
 
-//   var state = generateRandomString(16);
-//   res.cookie(stateKey, state);
+  var state = generateRandomString(16);
+  res.cookie(stateKey, state);
 
-//   // your application requests authorization
-//   var scope = 'user-read-private user-read-email';
-//   res.redirect('https://accounts.spotify.com/authorize?' +
-//     querystring.stringify({
-//       response_type: 'code',
-//       client_id: client_id,
-//       scope: scope,
-//       redirect_uri: redirect_uri,
-//       state: state
-//     }));
-// });
+  // your application requests authorization
+  var scope = 'user-read-private user-read-email';
+  res.redirect('https://accounts.spotify.com/authorize?' +
+    querystring.stringify({
+      response_type: 'code',
+      client_id: client_id,
+      scope: scope,
+      redirect_uri: redirect_uri,
+      state: state
+    }));
+});
 
 // app.get('/callback', function (req, res) {
 
@@ -134,5 +134,5 @@
 //   });
 // });
 
-// console.log('Listening on 3000');
-// app.listen(3000);
+console.log('Listening on 3000');
+app.listen(3000);
