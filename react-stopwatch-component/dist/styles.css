@@ -1,0 +1,21 @@
+h1 {
+  position: absolute;
+  margin: 3rem;
+}
+
+.stopwatch {
+  font-size: 150px;
+}
+
+.row {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.play-pause {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
