@@ -1,101 +1,66 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import { FaPlay, FaPause } from 'react-icons/fa';
-// import { BsCircle } from 'react-icons/bs';
-// import { interval } from 'rxjs';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { FaPlay, FaPause } from 'react-icons/fa';
+import { BsCircle } from 'react-icons/bs';
 
-// // class Stopwatch extends React.Component
-// // {
-// //   constructor(props)
-// //   {
-// //     super(props);
-// //     this.state = { stopwatchOn: false};
-// //     this.handleClickStopWatch = this.handleClickStopWatch.bind(this);
-// //     this.handleClickPlayPause = this.handleClickPlayPause.bind(this);
-// //   }
-// //   render()
-// //   {
-// //     let counter = 0;
-// //     let element;
-// //     let interval = null;
+class Stopwatch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { counter: 0, stopwatchOn: false, interval: 0 };
+    this.handleReset = this.handleReset.bind(this);
+    this.handlePlayPause = this.handlePlayPause.bind(this);
+  }
 
-// //     if(!this.state.stopwatchOn)
-// //     {
-// //       clearInterval(interval);
-// //       element =
-// //         <div>
-// //           <div className="row">
-// //             <h1>{counter}</h1>
-// //             <BsCircle onClick={this.handleClickStopWatch} className="stopwatch" />
-// //           </div>
-// //           <div className="row">
-// //             <FaPlay onClick={this.handleClickPlayPause} className="play-pause" />
-// //           </div>
-// //         </div>;
-// //     }else
-// //     {
-// //       interval = setInterval(() => {
-// //         console.log("hi");
-// //         counter+=1;
-// //         console.log(counter);}
-// //         , 1000);
-// //       element =
-// //         <div>
-// //           <div className="row">
-// //             <h1>{counter}</h1>
-// //             <BsCircle onClick={this.handleClickStopWatch} className="stopwatch" />
-// //           </div>
-// //           <div className="row">
-// //             <FaPause onClick={this.handleClickPlayPause} className="play-pause" />
-// //           </div>
-// //         </div>;
-// //     }
-// //     return element;
+  render() {
+    let element;
+    if (!this.state.stopwatchOn) {
+      element = (
+      <div>
+        <div className="row">
+          <h1>{this.state.counter}</h1>
+          < BsCircle onClick={this.handleReset} className="stopwatch" />
+        </div>
 
-// //   }
-// //   handleClickPlayPause()
-// //   {
-// //     this.setState((prevState) => ({
-// //       stopwatchOn: !prevState.stopwatchOn
-// //     }));
-// //     clearInterval(interval);
-// //   }
-// //   handleClickStopWatch()
-// //   {
-// //     console.log("reset button is pressed!");
-// //   }
-// //   upadteTime()
-// //   {
+        <div className="row" >
+          <FaPlay onClick={this.handlePlayPause} className="play-pause"/>
+        </div>
+      </div>);
+    } else {
+      element = (<div>
+        <div className="row">
+          <h1>{this.state.counter}</h1>
+          < BsCircle onClick={this.handleReset} className="stopwatch" />
+        </div>
 
-// //   }
-// // }
+        <div className="row"><FaPause onClick={this.handlePlayPause} className="play-pause" /></div>
+      </div>);
+    }
+    return element;
+  }
 
-// // ReactDOM.render(<Stopwatch />, document.getElementById('root'));
+  handlePlayPause() {
 
-// //REWRITE ATTEMPT 1
+    this.setState(prevState => ({
+      stopwatchOn: !prevState.stopwatchOn
+    }));
+    if (this.state.stopwatchOn) {
+      clearInterval(this.state.interval);
+    } else {
+      let curCounter = this.state.counter;
+      this.setState({
+        interval: setInterval(() => {
+          curCounter++;
 
-// class Stopwatch extends React.Component
-// {
-//   constructor(props)
-//   {
-//     super(props);
-//     this.handleClick = this.handleClick.bind(this);
-//   }
+          this.setState({ counter: curCounter });
+        }, 1000)
+      });
+    }
+  }
 
-//   render()
-//   {
-//     let counter = "helllo this is the counter";
-//     return (<div>
-//       <div className="row">< BsCircle/></div>
-//       <h2>{counter}</h2>
-//       <div className="row"><FaPlay /></div>
-//     </div>)
-//   }
+  handleReset() {
+    this.setState({ counter: 0 });
+    clearInterval(this.state.interval);
+  }
+}
 
-//   handleClick()
-//   {
-
-//   }
-// }
-
-// ReactDOM.render(<Stopwatch />, document.getElementById('root'));
+ReactDOM.render(<Stopwatch />, document.getElementById('root'));
