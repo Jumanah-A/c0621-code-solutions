@@ -10,15 +10,15 @@ const topics = [
 class Accordion extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: false, current: '' };
+    this.state = { current: '' };
     this.handleClick = this.handleClick.bind(this);
   }
 
   render() {
-    const listItems = topics.map(topic =>
+    const listItems = this.props.topics.map(topic =>
       <li className="description" key={topic.id}>
         <button data-topicid ={topic.id} onClick={this.handleClick}>{topic.topicName}</button>
-        {(this.state.isClicked) && (this.state.current === topic.id) &&
+        {(this.state.current === topic.id) &&
           <p>{topic.details}</p>
         }
       </li>);
@@ -26,11 +26,12 @@ class Accordion extends React.Component {
   }
 
   handleClick(event) {
-    this.setState(prevState => ({
-      isClicked: !prevState.isClicked
-    }));
-    this.setState({ current: event.target.dataset.topicid });
+    if (event.target.dataset.topicid === this.state.current) {
+      this.setState({ current: null });
+    } else {
+      this.setState({ current: event.target.dataset.topicid });
+    }
   }
 }
 
-ReactDOM.render(<Accordion />, document.getElementById('root'));
+ReactDOM.render(<Accordion topics={topics}/>, document.getElementById('root'));
