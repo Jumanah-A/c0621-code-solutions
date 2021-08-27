@@ -58,8 +58,11 @@ class Stopwatch extends React.Component {
   }
 
   handleReset() {
-    this.setState({ counter: 0 });
-    clearInterval(this.state.interval);
+    if (!this.state.stopwatchOn) {
+      this.setState({ counter: 0 });
+      clearInterval(this.state.interval);
+    }
+
   }
 }
 
