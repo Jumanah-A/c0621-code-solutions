@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  flex-direction: flex;
+}
+
+.carousel-border {
+  border-style: solid;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.progress {
+  display: flex;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
