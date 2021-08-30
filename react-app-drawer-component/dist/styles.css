@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+}
+
+.menu {
+  padding: 1rem;
+  font-size: xx-large;
+  position: fixed;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.hamburger-menu {
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  background-color: white;
+  padding: 1rem;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
