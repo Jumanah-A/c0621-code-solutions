@@ -8,13 +8,11 @@ class Drawer extends React.Component {
     this.state = { menuOpen: false };
     this.handleClick = this.handleClick.bind(this);
     this.handleTabClick = this.handleTabClick.bind(this);
-    this.container = 'container';
   }
 
   render() {
-    const container = this.container;
     const element =
-    <div className= {container}>
+      <div className={this.state.menuOpen ? 'container backdrop' : 'container' }>
     <GiHamburgerMenu className='menu' onClick={this.handleClick}></GiHamburgerMenu>
     {this.state.menuOpen &&
       <div className='hamburger-menu'>
@@ -32,11 +30,9 @@ class Drawer extends React.Component {
 
   handleClick(event) {
     this.setState(prevState => ({ menuOpen: !prevState.menuOpen }));
-    this.container = 'container backdrop';
   }
 
   handleTabClick(event) {
-    this.container = 'container';
     this.setState(prevState => ({ menuOpen: !prevState.menuOpen }));
   }
 }
