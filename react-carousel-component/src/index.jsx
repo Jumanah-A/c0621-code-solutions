@@ -8,7 +8,7 @@ class Carousel extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.handleArrowClick = this.handleArrowClick.bind(this);
-    this.state = { current: this.props.images[0].imageid, currentUrl: this.props.images[0].url };
+    this.state = { current: this.props.images[0].imageid, currentUrl: this.props.images[0].url, currentIndex: 0};
   }
 
   render() {
@@ -18,12 +18,12 @@ class Carousel extends React.Component {
       <span key={image.id}>
         {(this.state.current === image.id) &&
         <div>
-          <BsCircleFill key={image.id} data-imageid={image.id} data-imageurl={image.url} onClick={this.handleClick} />
+          <BsCircleFill key={image.id} data-imageid={image.id} data-imageurl={image.url} onClick={this.handleClick} data-index={this.props.images.indexOf(image)} />
         </div>
 
       }
       {(this.state.current !== image.id) &&
-          <BsCircle key={image.id} data-imageid={image.id} data-imageurl = {image.url} onClick={this.handleClick} />
+          <BsCircle key={image.id} data-imageid={image.id} data-imageurl={image.url} onClick={this.handleClick} data-index={this.props.images.indexOf(image)}/>
         }
       </span>);
 
@@ -51,8 +51,10 @@ class Carousel extends React.Component {
   }
 
   handleClick(event) {
-
-    this.setState({ current: event.target.dataset.imageid, currentUrl: event.target.dataset.imageurl });
+    console.log(event.target);
+    const dataset = event.target.dataset;
+    this.setState({ current: dataset.imageid, currentUrl: dataset.imageurl, currentIndex: dataset.index});
+    console.log(this.state);
   }
 
   handleArrowClick(event) {
