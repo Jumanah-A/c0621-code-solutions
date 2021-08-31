@@ -66,17 +66,13 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
-    let completed;
     const completedObject = {};
-    let newObject;
+    let index;
     const newArray = this.state.todos.slice();
     for (var i = 0; i < this.state.todos.length; i++) {
       if (this.state.todos[i].todoId === todoId) {
-        completed = this.state.todos[i].isCompleted;
-        completedObject.isCompleted = !completed;
-        newObject = this.state.todos[i];
-        newObject.isCompleted = !completed;
-        newArray[i] = newObject;
+        completedObject.isCompleted = !this.state.todos[i].isCompleted;
+        index = i;
         break;
       }
     }
@@ -85,8 +81,10 @@ export default class App extends React.Component {
         method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(completedObject)
       })
       .then(res => res.json())
-      .then(data =>
-        this.setState({ todos: newArray })
+      .then(data => {
+        newArray[index] = data;
+        this.setState({ todos: newArray });
+      }
       );
   }
 
