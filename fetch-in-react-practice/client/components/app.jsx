@@ -69,7 +69,7 @@ export default class App extends React.Component {
     let completed;
     const completedObject = {};
     let newObject;
-    const newArray = JSON.parse(JSON.stringify(this.state.todos));
+    const newArray = this.state.todos.slice();
     for (var i = 0; i < this.state.todos.length; i++) {
       if (this.state.todos[i].todoId === todoId) {
         completed = this.state.todos[i].isCompleted;
