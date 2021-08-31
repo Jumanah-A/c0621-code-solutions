@@ -33,10 +33,14 @@ app.use(express.static(__dirname + '/public'))
 app.get('/login', function (req, res) {
 
   var state = generateRandomString(16);
-  console.log(res.cookie(stateKey, state));
+  // console.log(res);
+  // console.log(res.cookie(stateKey, state));
   res.cookie(stateKey, state);
-  console.log(res.cookie);
-  console.log(req.cookies['spotify_auth_state']);
+  // console.log(res.cookie());
+  // console.log(req.cookies['spotify_auth_state']);
+  console.log('response', res);
+  console.log('------------------------------------------------------------');
+  console.log('request',req);
 
   // your application requests authorization
   var scope = 'user-read-private user-read-email';
@@ -58,10 +62,6 @@ app.get('/callback', function (req, res) {
   var code = req.query.code || null;
   var state = req.query.state || null;
   var storedState = req.cookies ? req.cookies[stateKey] : null;
-  console.log('req.cookies', req.cookies);
-  console.dir(req.cookies);
-  res.send(req.cookies);
-  console.log('req.cookies[stateKey]', req.cookies[stateKey])
   console.log("in the callback function hi ");
   console.log('state is:', state);
   console.log('storedState is :', storedState);
