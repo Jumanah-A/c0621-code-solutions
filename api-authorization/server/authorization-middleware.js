@@ -4,22 +4,14 @@ const errorMiddleware = require('./error-middleware');
 
 function authorizationMiddleware(req, res, next) {
   /* your code here */
-  try {
-    const xAccessToken = req.headers['x-access-token'];
-    if (!xAccessToken) {
-      const error401 = new ClientError(401, 'authentication required');
-      errorMiddleware(error401, req, res, next);
-      // throw new ClientError(401, 'authentication required');
-      return;
-    }
-    const payload = jwt.verify(xAccessToken, process.env.TOKEN_SECRET);
-    req.user = payload;
-    next();
-
-  } catch (error) {
-    console.error(error);
-
+  const xAccessToken = req.headers['x-access-token'];
+  if (!xAccessToken) {
+    const error401 = new ClientError(401, 'authentication required');
+    throw errorMiddleware(error401, req, res, next);
   }
+  const payload = jwt.verify(xAccessToken, process.env.TOKEN_SECRET);
+  req.user = payload;
+  next();
   /**
    * Try to get the 'X-Access-Token' from the req.headers.
    * If no token is provided,
