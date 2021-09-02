@@ -53,7 +53,6 @@ export default class App extends React.Component {
     return <NotFound />;
   }
 
-  // static contextType = AppContext;
   render() {
     if (this.state.isAuthorizing) return null;
     const { user, route } = this.state;
