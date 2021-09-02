@@ -15,7 +15,7 @@ const styles = {
 };
 
 export default class Home extends React.Component {
-  static contextType = AppContext;
+  contextType = AppContext;
   render() {
 
     if (!this.context.user) return <Redirect to="sign-in" />;

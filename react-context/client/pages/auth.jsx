@@ -4,7 +4,7 @@ import AuthForm from '../components/auth-form';
 import AppContext from '../lib/app-context';
 
 export default class AuthPage extends React.Component {
-  static contextType = AppContext;
+  contextType = AppContext;
   render() {
 
     const { user, route, handleSignIn } = this.context;
