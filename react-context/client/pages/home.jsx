@@ -1,6 +1,7 @@
 import React from 'react';
 import Redirect from '../components/redirect';
 import AppContext from '../lib/app-context';
+// import App from '../app';
 
 const styles = {
   gifContainer: {
@@ -15,7 +16,8 @@ const styles = {
 };
 
 export default class Home extends React.Component {
-  contextType = AppContext;
+  // static contextType = AppContext;
+  // contextType = AppContext;
   render() {
 
     if (!this.context.user) return <Redirect to="sign-in" />;
@@ -32,3 +34,4 @@ export default class Home extends React.Component {
     );
   }
 }
+Home.contextType = AppContext;
