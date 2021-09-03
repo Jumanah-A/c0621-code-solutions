@@ -48,7 +48,7 @@ User can sign in:
 
 
 User can stay signed in (even if they refresh the page):
-The redirect function is called in the as long as the user object is not null
+The redirect function is called in the as long as the user object is not null (aka the user is signed in and its token is set and stored in the local storage)
 the path should stay as it is if its not an empty string.
 
 User can sign out:
