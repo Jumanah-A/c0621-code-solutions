@@ -1,0 +1,57 @@
+index.html -> essentially an empty file,
+main.js is linked -> main.js combined all of the js/jsx files
+starting from index.js:
+  consist of two routing methods that can be called with the post http request
+
+User can sign up:
+  flow of the code:
+    client:
+    The index.jsx file is run. which casues the the App react class Component to render and run.
+    In the app.jsx file most of the module in the client directory are imported, the app class initializes its states and binds its methods.
+    then the render method is called which uses the react context methods to pass the values of the initialized variables in render easily.
+    The Navbar and the PageContainer react components are then called returning the the react elements to be rendered to the page.
+    The PageContainer calls the renderPage method which decide teh content (which react compenent to render <home/>, <Auth/> or <not found/>)
+    When the user signs up the <auth /> react component gets rendered into the page based on the path.
+    To get teh value of path the parseRoute method is called with the window.loctaion.hash value.
+    In the AuthPage class the react componenet (welcome message, etc) are shown for the signup process and the
+    the AuthForm react class component is classed with the path and the handleSignIn method of the app class.
+    In the AuthForm class componenet, the state is initialized and the methods are binded. The render method is called and renders the form with the "sign up" action value.
+    which is triggered when the user clicks the sumbit button or presses enter.
+    The handleSubmit button is then called which called the fetch method with the signup target route.
+
+    Server/Database:
+      When the sign-up target pathname gets called:
+        the user passes in two parameters a user name and password.
+        the parametrs are then checked for validity and throw an error when needed.
+        After ensuring that the password and username are valid, the password is then hashed using argon2.hash method.
+        The hashed password along with the username are then inserted into the user's database using the query method of the db object,
+        along with the sql code of the insert method and the username and password in the parametrized query.
+        If all goes well the user recieved a success status code of 201 along with the data that was inserted into the database.
+        If an error occured while hashing the password is caught and passed to the next method.
+
+User can sign in:
+  flow of the code:
+    client:
+    the user clicks on the SignIn button, the path is updated with the location of the poge and teh PageContainer is updated with the <Auth/> react component,
+    which in turn renders the AuthForm react compoenent with the path an dthe signIn method of teh app class as props. When teh user triggers action by submitting
+     the form the ahndleSubmit method is called wihich in turns calls fetch with the sign up target route, then  if the both the user and token are provided,
+    the SignIn method is called from the app class, which then sets the token to the local storage and renders the page setting teh state.
+
+    server/database:
+      When the post method of teh app object is called with the sign-in target route,
+      the parameters are checked and validated and thrown an error if they are not provided.
+      the query method is called with the sql code for selecting the data and the parameters in array.
+      The result of the query is then validated, if nothing is returned, an erro is thrown, else
+      the verify method is called on the hashed password and the user password
+      if they mathc the the payload obhject created from the userId and username are sign using the sign and the token_secret.
+      the  token is sent to teh response, else a client errro si thrown.
+
+
+User can stay signed in (even if they refresh the page):
+The redirect function is called in the as long as the user object is not null (aka the user is signed in and its token is set and stored in the local storage)
+the path should stay as it is if its not an empty string.
+
+User can sign out:
+  When the user clicks on the Sign out button, teh handleSignOut method of the app class is called
+  Which casues the user token to be removed from the localStorage. Then the user is set to null and
+  this change of state causes the the page to rerender and be redirected to the homepage.
